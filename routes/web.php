@@ -16,3 +16,8 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('ver', function () {
+    return view('codigo');
+});
+Route::get('codigo', 'SolucionController@codigo');
+Route::post('solucion',['as'=> 'codigo.solucion', 'uses'=>'SolucionController@solucion']);
